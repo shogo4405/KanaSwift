@@ -1,16 +1,22 @@
 ## KanaSwift
 iOS向けの半角、全角などの相互変換ライブラリーです。
 
+## インストール方法
+
+## 利用方法
+    let konnichiwa:String = "こんにちわ"
+    print(konnichiwa.katakanacaseString) // コンニチワ
+
 ## リンク
 ### 他の言語
-JavaScript, ActionScript3, Java版は次のURLで公開しています。
-https://github.com/shogo4405/KanaXS
+* JavaScript, ActionScript3, Java版は次のURLで公開しています。
+ * https://github.com/shogo4405/KanaXS
 
 ### .NET版
-どぼん！さんが.NETな環境でつかえるC#版を公開されています。
-http://wiki.dobon.net/index.php?free%2FkanaxsCSharp
+* どぼん！さんが.NETな環境でつかえるC#版を公開されています。
+ * http://wiki.dobon.net/index.php?free%2FkanaxsCSharp
 
-### ライセンス情報
+## ライセンス情報
 New BSD License
 
 Copyright (c) 2015, shogo4405/ENDO Shogo
