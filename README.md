@@ -1,11 +1,27 @@
 ## KanaSwift
-iOS向けの半角、全角などの相互変換ライブラリーです。
+Swift向けの半角、全角などの相互変換ライブラリーです。
 
 ## インストール方法
+### Cocoapod
+    pod 'KanaSwift'
 
 ## 利用方法
-    let konnichiwa:String = "こんにちわ"
-    print(konnichiwa.katakanacaseString) // コンニチワ
+Stringを拡張しています
+```swfit
+import KanaSwift
+
+// 半角文字列を全角文字列に
+"Ｈｅｌｌｏ　Ｗｏｒｌｄ！！".halfwidthcaseString // Hello World!!
+// 全角文字列を半角文字列に
+"Hello World!!".fullwidthcaseString // Ｈｅｌｌｏ　Ｗｏｒｌｄ！！
+// ひらがなをカタカナに
+"コンニチワ世界".hiraganacaseString // こんにちわ世界
+// カタカナをひらがなに
+"こんにちわ世界".katakanacaseString // コンニチワ世界
+```
+
+## 内部的には
+ただのCFStringTransformのSwiftラッパーです。
 
 ## リンク
 * JavaScript, ActionScript3, Java版は次のURLで公開しています。
