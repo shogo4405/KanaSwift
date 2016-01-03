@@ -11,6 +11,7 @@
 		290FC5611C27055B0082B6C6 /* KanaSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 290FC5561C27055A0082B6C6 /* KanaSwift.framework */; };
 		290FC5661C27055B0082B6C6 /* KanaSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290FC5651C27055B0082B6C6 /* KanaSwiftTests.swift */; };
 		290FC5711C27059F0082B6C6 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290FC5701C27059F0082B6C6 /* String+Extension.swift */; };
+		2949098E1C3925EE003606A3 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290FC5701C27059F0082B6C6 /* String+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -205,6 +206,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2949098E1C3925EE003606A3 /* String+Extension.swift in Sources */,
 				290FC5661C27055B0082B6C6 /* KanaSwiftTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -383,6 +385,7 @@
 				290FC56C1C27055B0082B6C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		290FC56D1C27055B0082B6C6 /* Build configuration list for PBXNativeTarget "KanaSwiftTests" */ = {
 			isa = XCConfigurationList;
@@ -391,6 +394,7 @@
 				290FC56F1C27055B0082B6C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

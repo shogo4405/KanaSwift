@@ -1,19 +1,37 @@
 import XCTest
 @testable import KanaSwift
 
-class KanaSwiftTests: XCTestCase {
-    static let hiragana:String = "こんにちわ世界"
-    static let katakana:String = "コンニチワ世界"
+final class KanaSwiftTests: XCTestCase {
 
-    override func setUp() {
-        super.setUp()
+    var hiragana:String =
+    "ぁあぃいぅうぇえぉおかがきぎくぐけげこごさざしじすずせぜそぞただちぢっつづてでとどなにぬねのはばぱひびぴふぶぷへべぺほぼぽまみむめもゃやゅゆょよらりるれろゎわゐゑをんゔゕゖゝゞ"
+
+    var halfwidthAlphabed:String = "!\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~"
+    var fullwidthAlphabed:String = "！＂＃＄％＆＇（）＊＋，－．／０１２３４５６７８９：；＜＝＞？＠ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ［＼］＾＿｀ａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚ｛｜｝～"
+
+    var fullwidthKatakana:String =
+    "ァアィイゥウェエォオカガキギクグケゲコゴサザシジスズセゼソゾタダチヂッツヅテデトドナニヌネノハバパヒビピフブプヘベペホボポマミムメモャヤュユョヨラリルレロヮワヰヱヲンヴゕゖヽヾ"
+    var halfwidthKatakana:String = "ｧｱｨｲｩｳｪｴｫｵｶｶﾞｷｷﾞｸｸﾞｹｹﾞｺｺﾞｻｻﾞｼｼﾞｽｽﾞｾｾﾞｿｿﾞﾀﾀﾞﾁﾁﾞｯﾂﾂﾞﾃﾃﾞﾄﾄﾞﾅﾆﾇﾈﾉﾊﾊﾞﾊﾟﾋﾋﾞﾋﾟﾌﾌﾞﾌﾟﾍﾍﾞﾍﾟﾎﾎﾞﾎﾟﾏﾐﾑﾒﾓｬﾔｭﾕｮﾖﾗﾘﾙﾚﾛヮﾜヰヱｦﾝｳﾞゕゖヽヾ"
+
+    func testHiragana() {
+        // XXX: 半角カタカナが全角カタカナになるみたいです。
+        XCTAssertEqual(hiragana, halfwidthKatakana.hiraganacaseString)
+        XCTAssertEqual(hiragana, fullwidthKatakana.hiraganacaseString)
     }
 
-    override func tearDown() {
-        super.tearDown()
+    func testKatakana() {
+        XCTAssertEqual(fullwidthKatakana, hiragana.katakanacaseString)
     }
 
-    func testHiraganacase() {
-        print(KanaSwiftTests.hiragana.katakanacaseString)
+    func testHalfwidth() {
+        XCTAssertEqual(halfwidthKatakana, fullwidthKatakana.halfwidthcaseString)
+        XCTAssertEqual(" ", "　".halfwidthcaseString)
+        XCTAssertEqual(halfwidthAlphabed, fullwidthAlphabed.halfwidthcaseString)
+    }
+
+    func testFullwidth() {
+        XCTAssertEqual("　", " ".fullwidthcaseString)
+        XCTAssertEqual(fullwidthKatakana, halfwidthKatakana.fullwidthcaseString)
+        XCTAssertEqual(fullwidthAlphabed, halfwidthAlphabed.fullwidthcaseString)
     }
 }
