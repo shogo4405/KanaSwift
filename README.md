@@ -14,4 +14,4 @@ iOS向けの半角、全角などの相互変換ライブラリーです。
  * http://wiki.dobon.net/index.php?free%2FkanaxsCSharp
 
 ## ライセンス情報
-New BSD License
+New BSD Licenseで公開しています。詳細はLICENSEを参照してください。
